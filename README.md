@@ -22,7 +22,7 @@ collection = returnCollection(db, collection = '**allbancos_crf**')
 
 
 ### Iniciar a aplicação localmente: 
-`python app.py`
+`python3 app.py`
 
 ### Instruções para publicar na plataforma Heroku
 https://devcenter.heroku.com/articles/getting-started-with-python
