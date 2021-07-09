@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <script src="https://ialab.it.monash.edu/webcola/cola.min.js"></script>
+    <script src="https://unpkg.com/algorithmx"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script async src="/static/js/graph-vis.js"></script>
+    <script src="/static/js/script.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <title>IFSP - Câmpus Pirituba</title>
+</head>
+
+
+<body>
+    <div id="left">
+        <img src="/static/images/logo.jpeg" alt="Logotipo do IFSP" />
+    </div>
+
+    <h2>TCC - Reconhecimento de entidades</h2>
+    <h4>(Flask + vis.js + networkx + Mongodb)</h4>
+
+
+    <!-- Botão que inicia o grafo   -->
+    <p>
+        <div class="row text-center">
+            <!--button class="btn btn-primary" id="clearButton">Clear</button-->
+            <button class="btn btn-primary" id="sendButton">Criar ou reiniciar grafo...</button>
+            <br /><b>Clique 2 vezes sobre os nós para navegar no grafo</b>
+        </div>
+    </p>
+
+    <!-- Elementos para hospedar a barra de progresso e o grafo   -->
+    <div id="wrapper">
+        <div id="mynetwork"></div>
+        <div id="loadingBar">
+            <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                    <div id="bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
