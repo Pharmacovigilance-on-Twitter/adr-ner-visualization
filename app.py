@@ -15,16 +15,16 @@ app._static_folder = os.path.abspath("templates/static")
 G = nx.DiGraph()
 
 #Conectar ao MongoDB
-def returnDatabase(uri = 'mongodb://...',
-                   database = 'twitter'):
+def returnDatabase(uri = 'mongodb+srv://db_userTwitter:1QFuElt3ASr5r7Dh@twitter.vw2tu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+                   database = 'Twitter'):
     return MongoClient(uri, connectTimeoutMS=300000).get_database(database)
 
-def returnCollection(db, collection = 'allbancos_crf'):
+def returnCollection(db, collection = 'CRF'):
     return db.get_collection(collection)
 
 #Criar os nós do grafo
 def returnUsers(collection):
-    df_user = pd.DataFrame(list(collection.find({'produto':{'$exists': 'true'}, 'problema':{'$exists': 'true'}}, {"_id": 0, 'user.id_str': 1, "user.name": 1})))
+    df_user = pd.DataFrame(list(collection.find({'Drug':{'$exists': 'true'}, 'ADR':{'$exists': 'true'}}, {"_id": 0, 'user.id_str': 1, "user.name": 1})))
     df_user['name'] = df_user['user'].apply(lambda cell: cell['name'])
     df_user['user_id'] = df_user['user'].apply(lambda cell: cell['id_str'])
     df_user['group'] = 1
@@ -32,24 +32,24 @@ def returnUsers(collection):
     df_user = df_user.drop_duplicates(subset=['user_id'])
     return df_user
 
-def returnProblems(collection):
-    df_problema = pd.DataFrame(list(collection.find({'produto':{'$exists': 'true'}, 'problema':{'$exists': 'true'} }, {"_id": 0, "problema": 1})))
-    df_problema = df_problema.explode('problema').drop_duplicates()
-    df_problema.columns = ['descricao']
-    df_problema['tipo'] = 'problema'
-    df_problema['group'] = 2
-    return df_problema
+def returnReactions(collection):
+    df_ADR = pd.DataFrame(list(collection.find({'Drug':{'$exists': 'true'}, 'ADR':{'$exists': 'true'} }, {"_id": 0, "ADR": 1})))
+    df_ADR = df_ADR.explode('ADR').drop_duplicates()
+    df_ADR.columns = ['descricao']
+    df_ADR['tipo'] = 'ADR'
+    df_ADR['group'] = 2
+    return df_ADR
 
-def returnProducts(collection):
-    df_produto = pd.DataFrame(list(collection.find({'produto':{'$exists': 'true'}, 'problema':{'$exists': 'true'} }, { "_id": 0, "produto": 1})))
-    df_produto = df_produto.explode('produto').drop_duplicates()
-    df_produto.columns = ['descricao']
-    df_produto['tipo'] = 'produto'
-    df_produto['group'] = 3
-    return df_produto
+def returnMedicines(collection):
+    df_Drug = pd.DataFrame(list(collection.find({'Drug':{'$exists': 'true'}, 'ADR':{'$exists': 'true'} }, { "_id": 0, "Drug": 1})))
+    df_Drug = df_Drug.explode('Drug').drop_duplicates()
+    df_Drug.columns = ['descricao']
+    df_Drug['tipo'] = 'Drug'
+    df_Drug['group'] = 3
+    return df_Drug
 
-def returnNodes(users, products, problems):
-    frames = [problems, products]
+def returnNodes(users, medicines, reactions):
+    frames = [reactions, medicines]
     df_reclamacao = pd.concat(frames).drop_duplicates()
     df_reclamacao['id'] = pd.factorize(df_reclamacao.descricao)[0]
     framesNodes = [users[['user_id','name', 'group']].rename(columns={"user_id": "id", "name": "label"}), 
@@ -58,40 +58,40 @@ def returnNodes(users, products, problems):
     return df_nodes
 
 #Criar as arestas do grafo
-def returnUserProducts(collection):
-    df_user_produto = pd.DataFrame(list(collection.find({'produto':{'$exists': 'true'}, 
-                                                         'problema':{'$exists': 'true'} }, 
-                                                        {'_id': 0, 'produto': 1, 'user.id_str': 1, 'user.name': 1})))
-    df_user_produto['name'] = df_user_produto['user'].apply(lambda cell: cell['name'])
-    df_user_produto['user_id'] = df_user_produto['user'].apply(lambda cell: cell['id_str'])
-    df_user_produto.drop('user', 1, inplace=True)
-    df_user_produto = df_user_produto.explode('produto')
-    return df_user_produto
+def returnUserMedicines(collection):
+    df_user_Drug = pd.DataFrame(list(collection.find({'Drug':{'$exists': 'true'}, 
+                                                         'ADR':{'$exists': 'true'} }, 
+                                                        {'_id': 0, 'Drug': 1, 'user.id_str': 1, 'user.name': 1})))
+    df_user_Drug['name'] = df_user_Drug['user'].apply(lambda cell: cell['name'])
+    df_user_Drug['user_id'] = df_user_Drug['user'].apply(lambda cell: cell['id_str'])
+    df_user_Drug.drop('user', 1, inplace=True)
+    df_user_Drug = df_user_Drug.explode('Drug')
+    return df_user_Drug
 
-def returnUserProblems(collection):
-    df_user_problema = pd.DataFrame(list(collection.find({'produto':{'$exists': 'true'}, 
-                                                          'problema':{'$exists': 'true'} }, 
-                                                         {'_id': 0, 'problema': 1, 'user.id_str': 1, 'user.name': 1})))
-    df_user_problema['name'] = df_user_problema['user'].apply(lambda cell: cell['name'])
-    df_user_problema['user_id'] = df_user_problema['user'].apply(lambda cell: cell['id_str'])
-    df_user_problema.drop('user', 1, inplace=True)
-    df_user_problema = df_user_problema.explode('problema')
-    return df_user_problema
+def returnUserReactions(collection):
+    df_user_ADR = pd.DataFrame(list(collection.find({'Drug':{'$exists': 'true'}, 
+                                                          'ADR':{'$exists': 'true'} }, 
+                                                         {'_id': 0, 'ADR': 1, 'user.id_str': 1, 'user.name': 1})))
+    df_user_ADR['name'] = df_user_ADR['user'].apply(lambda cell: cell['name'])
+    df_user_ADR['user_id'] = df_user_ADR['user'].apply(lambda cell: cell['id_str'])
+    df_user_ADR.drop('user', 1, inplace=True)
+    df_user_ADR = df_user_ADR.explode('ADR')
+    return df_user_ADR
 
-def returnProductProblem(collection):
-    df_produto_problema = pd.DataFrame(list(collection.find({'produto':{'$exists': 'true'}, 
-                                                             'problema':{'$exists': 'true'}}, 
-                                                            {'_id': 0, 'produto': 1, 'problema': 1})))
-    df_produto_problema = df_produto_problema.explode('produto')
-    df_produto_problema = df_produto_problema.explode('problema')
-    return df_produto_problema
+def returnMedicineReaction(collection):
+    df_Drug_ADR = pd.DataFrame(list(collection.find({'Drug':{'$exists': 'true'}, 
+                                                             'ADR':{'$exists': 'true'}}, 
+                                                            {'_id': 0, 'Drug': 1, 'ADR': 1})))
+    df_Drug_ADR = df_Drug_ADR.explode('Drug')
+    df_Drug_ADR = df_Drug_ADR.explode('ADR')
+    return df_Drug_ADR
 
 def returnID(label, dataframe):
     return list(dataframe.loc[dataframe['label'] == label]['id'])[0] 
 
-def returnEdges(user_problems, product_problems):
-    framesEdges = [product_problems[['id_produto', 'id_problema']].rename(columns={"id_produto": "from", "id_problema": "to"}),
-                   user_problems[['user_id', 'id_problema']].rename(columns={"id_problema": "from", "user_id": "to" })]
+def returnEdges(user_reactions, medicine_reactions):
+    framesEdges = [medicine_reactions[['id_Drug', 'id_ADR']].rename(columns={"id_Drug": "from", "id_ADR": "to"}),
+                   user_reactions[['user_id', 'id_ADR']].rename(columns={"id_ADR": "from", "user_id": "to" })]
     return pd.concat(framesEdges).drop_duplicates()
 
 #Criar grafo
@@ -127,25 +127,25 @@ def post_javascript_data():
     if(G.number_of_nodes() > 0):
         return { 'nodes' : list(G.nodes.data()), 'edges' : list(G.edges())}
         
-    uri = "mongodb://Informe a sua conexão"
-    db = returnDatabase(uri = uri, database = 'twitter' )
-    collection = returnCollection(db, collection = 'allbancos_crf')
+    uri = "mongodb+srv://db_userTwitter:1QFuElt3ASr5r7Dh@twitter.vw2tu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    db = returnDatabase(uri = uri, database = 'Twitter' )
+    collection = returnCollection(db, collection = 'CRF')
 
     #Criar os nós do grafo    
     users = returnUsers(collection)
-    problems = returnProblems(collection)
-    products = returnProducts(collection)
-    nodes = returnNodes(users, products, problems)
+    reactions = returnReactions(collection)
+    medicines = returnMedicines(collection)
+    nodes = returnNodes(users, medicines, reactions)
 
     #Criar as arestas do grafo
-    user_products = returnUserProducts(collection)
-    user_problems = returnUserProblems(collection)
-    product_problems = returnProductProblem(collection)
-    user_products["id_produto"] = user_products.apply(lambda row: returnID(row["produto"], nodes), axis=1)
-    user_problems["id_problema"] = user_problems.apply(lambda row: returnID(row["problema"], nodes), axis=1)
-    product_problems["id_produto"] = product_problems.apply(lambda row: returnID(row["produto"], nodes), axis=1)
-    product_problems["id_problema"] = product_problems.apply(lambda row: returnID(row["problema"], nodes), axis=1)
-    edges = returnEdges(user_problems, product_problems)
+    user_medicines = returnUserMedicines(collection)
+    user_reactions = returnUserReactions(collection)
+    medicine_reactions = returnMedicineReaction(collection)
+    user_medicines["id_Drug"] = user_medicines.apply(lambda row: returnID(row["Drug"], nodes), axis=1)
+    user_reactions["id_ADR"] = user_reactions.apply(lambda row: returnID(row["ADR"], nodes), axis=1)
+    medicine_reactions["id_Drug"] = medicine_reactions.apply(lambda row: returnID(row["Drug"], nodes), axis=1)
+    medicine_reactions["id_ADR"] = medicine_reactions.apply(lambda row: returnID(row["ADR"], nodes), axis=1)
+    edges = returnEdges(user_reactions, medicine_reactions)
 
 
     #Criar grafo (objeto)    
