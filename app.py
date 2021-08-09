@@ -15,8 +15,7 @@ app._static_folder = os.path.abspath("templates/static")
 G = nx.DiGraph()
 
 #Conectar ao MongoDB
-def returnDatabase(uri = 'mongodb+srv://db_userTwitter:1QFuElt3ASr5r7Dh@twitter.vw2tu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-                   database = 'Twitter'):
+def returnDatabase(uri = 'mongodb+srv://db_userTwitter:1QFuElt3ASr5r7Dh@twitter.vw2tu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', database = 'Twitter'):
     return MongoClient(uri, connectTimeoutMS=300000).get_database(database)
 
 def returnCollection(db, collection = 'CRF'):
