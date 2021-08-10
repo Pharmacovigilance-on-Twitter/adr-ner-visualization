@@ -24,10 +24,22 @@ body {
     border: 1px solid lightgray;
 }
 
-img {
+img#logo {
     width: auto;
     height: auto;
     float: left;
+}
+img#integrante1 {
+    width: 150px;
+    height: 150px;  
+}
+img#integrante2 {
+    width: 150px;
+    height: 150px;  
+}
+img#integrante3{
+    width: 150px;
+    height: 150px;  
 }
 
 #left {
