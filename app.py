@@ -172,7 +172,7 @@ def post_javascript_filter():
 ######## HOME ############
 @app.route("/", methods=["GET"])
 def index():    
-    return render_template('../layouts/index.html')
+    return render_template('/layouts/index.html')
 
 
 if __name__ == '__main__':
