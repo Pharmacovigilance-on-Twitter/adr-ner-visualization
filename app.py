@@ -9,6 +9,8 @@ from pymongo import MongoClient #access MongoDB
 import itertools
 import pandas as pd
 
+
+
 app = Flask(__name__)
 app._static_folder = os.path.abspath("templates/static")
 
