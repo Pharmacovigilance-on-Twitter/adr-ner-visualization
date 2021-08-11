@@ -13,7 +13,7 @@
 
 
 ### As postagens do Twitter devem possuir a estrutura marcada na figura
-![mongo](https://user-images.githubusercontent.com/55667496/129103432-278b571c-e24a-4002-b4c7-17551c51bdf7.jpg)
+<image width='500px' src='./home.jpg'>
 
 
 ### Iniciar a aplicação localmente: 
@@ -25,7 +25,7 @@ https://devcenter.heroku.com/articles/getting-started-with-python
 
 ### Home page
 #### Site demonstração: https://tcc-named-entity-recognition.herokuapp.com/
-![grafo](https://user-images.githubusercontent.com/55667496/129103749-fee5adfc-d068-48f9-b376-7c3030acb8c8.jpg)
+<image width='500px' src='./postagens.jpg'>
 
 
 
