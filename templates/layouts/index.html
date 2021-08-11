@@ -25,18 +25,18 @@
         <img id="logo" src="../static/images/logo.jpeg" alt="Logotipo do IFSP" />
     </div>
 
-    <h2>TCC ADR - Reconhecimento de entidades</h2>
-    <h4>(Flask + vis.js + networkx + Mongodb)</h4>
+    <h3><strong>INTELIGÊNCIA ARTIFICIAL EM FARMACOVIGILÂNCIA</strong></h3>
+    <h4>APLICAÇÃO EM POSTAGENS DO TWITTER RELACIONADAS A ANTIDEPRESSIVOS<br>(Flask + vis.js + networkx + MongoDB)</h4>
 
 
     <!-- Botão que inicia o grafo   -->
-    <p>
+    
         <div class="row text-center">
-            <!--button class="btn btn-primary" id="clearButton">Clear</button-->
-            <button class="btn btn-primary" id="sendButton">Criar ou reiniciar grafo...</button>
-            <br /><b>Clique 2 vezes sobre os nós para navegar no grafo</b>
+            <button class="btn btn-primary" id="sendButton">Criar ou reiniciar grafo...</button><br>
+            <b>Clique 2 vezes sobre os nós para navegar no grafo</b>  
         </div>
-        <div class="row text-right" style="margin: 10px;">
+        
+        <div class="row text-right" style="margin-right: 8px; padding: 5px; margin-bottom: 5px;">
             <button class="btn btn-secondary"  id="aboutButton" type="button" data-toggle="modal" data-target="#myModal">Mais informações</button>            
         </div>
         <div class="modal fade" id="myModal" role="dialog">
@@ -45,16 +45,26 @@
               <!-- Modal content-->
               <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal-lg">&times;</button>
-                  <h4 class="modal-title">Modal Header - Titulo </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  <h4 class="modal-title">
+                    INTELIGÊNCIA ARTIFICIAL PARA A FARMACOVIGILÂNCIA EM POSTAGENS NO TWITTER RELACIONADO A MEDICAMENTOS ANTIDEPRESSIVOS.
+                    </h4>
                 </div>
                 <div class="modal-body">
                   <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <img id="integrante1" src="../static/images/katheleen.jpg" border="0">
-                  <img id="integrante2" src="../static/images/beatriz.jpg" border="0">
                   <hr>
-                  <p id="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <img id="integrante3" src="../static/images/fabio.jpg" border="0">
+                  <h4> Elaborado por: </h4>
+                  <text>Katheleen Cristine Gregorato & Beatriz Silva Paixão</text>
+                  <br>
+                  <img id="integrante1" src="../static/images/katheleen.jpg" style="margin: 30px;">
+                  <img id="integrante2" src="../static/images/beatriz.jpg" style="margin: 10px;">
+                  <hr>
+                  <h4> Orientado por: </h4>
+                  <text>Fabio Teixeira</text>
+                  <br>
+                  <img id="integrante3" src="../static/images/fabio.jpg">
                     
                 </div>
                         
@@ -65,15 +75,13 @@
               
             </div>
           </div>
-    </p>
-
 
 
     <!-- Elementos para hospedar a barra de progresso e o grafo   -->
     <div id="wrapper">
         <div id="mynetwork"></div>
         <div id="loadingBar">
-            <div class="outerBorder">
+            <div class="outerBorder" >
                 <div id="text">0%</div>
                 <div id="border">
                     <div id="bar"></div>
