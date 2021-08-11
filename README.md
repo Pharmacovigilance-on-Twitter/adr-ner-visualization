@@ -1,3 +1,4 @@
+
 # Grafo para visualização de dados do Twitter
 ## As postagens foram marcadas por meio de um modelo de reconhecimento de entidades
 
@@ -12,7 +13,7 @@
 
 
 ### As postagens do Twitter devem possuir a estrutura marcada na figura
-<image width='500px' src='./postagens.png'>
+![mongo](https://user-images.githubusercontent.com/55667496/129103432-278b571c-e24a-4002-b4c7-17551c51bdf7.jpg)
 
 
 ### Iniciar a aplicação localmente: 
