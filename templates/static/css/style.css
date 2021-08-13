@@ -21,7 +21,7 @@ body {
     text-align: center;
     width: 100%;
     height: 100%;
-    border: 1px solid lightgray;
+    border: 2px solid lightgray;
 }
 
 img#logo {
@@ -35,7 +35,7 @@ img#integrante1 {
 }
 img#integrante2 {
     width: 215px;
-    height: 290px;  
+    height: 300px;  
 }
 img#integrante3{
     width: 215px;
@@ -79,13 +79,13 @@ img#integrante3{
     width: 30px;
     height: 50px;
     margin: auto auto auto auto;
-    font-size: 22px;
+    font-size: 21px;
     color: #000000;
 }
 
 div.outerBorder {
     position: relative;
-    top: 400px;
+    top: 300px;
     width: 600px;
     height: 44px;
     margin: auto auto auto auto;
@@ -130,7 +130,7 @@ div.outerBorder {
     margin: auto auto auto auto;
     border-radius: 11px;
     border: 2px solid rgba(30, 30, 30, 0.05);
-    background: rgb(0, 173, 246);
+    background: rgb(5, 122, 172);
     /* Old browsers */
     box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.4);
 }
@@ -140,7 +140,7 @@ div.outerBorder {
 }
 h4.modal-title{
     font-weight: bolder;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .modal-header{
@@ -148,9 +148,12 @@ h4.modal-title{
     color: white;
     width: 100%;
     height: 90px;
-    
+}
+.modal-body {
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .modal-footer{
+    font-family: 'Times New Roman', Times, serif;
     background-color: rgb(219, 217, 217);
 }
