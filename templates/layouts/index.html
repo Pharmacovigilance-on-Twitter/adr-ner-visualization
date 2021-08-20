@@ -35,24 +35,16 @@
             <br>
               <!-- Botão que inicia o grafo   -->
               <div class="row text-right w3-right w3-hide-small" style="margin-top: 20px;">
-                <button class="btn btn-warning" id="sendButton" >Criar ou reiniciar grafo...</button><br>
+                <button class="btn btn-warning" id="sendButton" >Criar ou reiniciar grafo...</button>
               </div>
           </div>               
       </div>
-    </div>     
-        
- 
-          <!-- Project Section -->
-          <div class="w3-container w3-padding-32" id="projects">
-            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"> O Projeto </h3>
+        <div class="title-main">
+          <h4><b>INTELIGÊNCIA ARTIFICIAL PARA A FARMACOVIGIL NCIA EM POSTAGENS NO TWITTER RELACIONADAS A ANTIDEPRESSIVOS</b> </h4>
+          <h4><i>(Flask + vis.js + networkx + MongoDB)</i></h4>
           </div>
-          <div>
-            <h4><b>INTELIGÊNCIA ARTIFICIAL PARA A FARMACOVIGILÂNCIA APLICADA EM TWEETS: MEDICAMENTOS ANTIDEPRESSIVOS</b> </h4>
-            <h4><i>(Flask + vis.js + networkx + MongoDB)</i></h4>
-            <hr>
-            <p style="text-align: justify; margin: 20px;">O impacto psicológico da quarentena, causado pela crise sanitária atribuída à nova Sars-Cov-2, fez com que grande parte da população utilizasse medicamentos para tratamento de depressão. Outra consequência do isolamento social é a manifestação individual de opiniões ou julgamentos em redes sociais, tornando-as uma fonte de dados valiosos. Objetivo: construção de uma solução computacional capaz de identificar automaticamente relatos de efeitos adversos de medicamentos antidepressivos postados na rede social Twitter.  Método: Criação de uma base de dados com aproximadamente 5.000 postagens coletadas da rede social Twitter. Foram utilizadas técnicas de aprendizado de máquina, reconhecimento de entidades nomeadas, processamento de linguagem natural e grafos para identificar medicamentos e seus respectivos efeitos adversos.  Resultados: o  reconhecimento de entidades nomeadas alcançou valores de f-score superiores a 0,56. Uma aplicação web foi construída para mostrar a navegação dos resultados alcançados por meio de um grafo. Conclusão: A rede social mostrou-se uma fonte de dados poderosa para efeitos de farmacovigilância, pois o modelo de classificador apresentado neste artigo demonstra resultados satisfatórios para as técnicas utilizadas tornando-os promissores.
-            </p>                    
-          </div>      
+      </div>     
+        
 
     <!-- Elementos para hospedar a barra de progresso e o grafo   -->
     <div id="wrapper">
@@ -67,22 +59,59 @@
         </div>
     </div>
 
+      <!-- Project Section -->
+      <div class="w3-container w3-padding-32" id="projects">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"> O Projeto </h3>
+      </div>
+      <div>
+       <p style="text-align: justify; margin: 20px;">O impacto psicológico da quarentena, causado pela crise sanitária atribuída à nova Sars-Cov-2, fez com que grande parte da população utilizasse medicamentos para tratamento de depressão. Outra consequência do isolamento social é a manifestação individual de opiniões ou julgamentos em redes sociais, tornando-as uma fonte de dados valiosos. Objetivo: construção de uma solução computacional capaz de identificar automaticamente relatos de efeitos adversos de medicamentos antidepressivos postados na rede social Twitter.  Método: Criação de uma base de dados com aproximadamente 5.000 postagens coletadas da rede social Twitter. Foram utilizadas técnicas de aprendizado de máquina, reconhecimento de entidades nomeadas, processamento de linguagem natural e grafos para identificar medicamentos e seus respectivos efeitos adversos.  Resultados: o  reconhecimento de entidades nomeadas alcançou valores de f-score superiores a 0,56. Uma aplicação web foi construída para mostrar a navegação dos resultados alcançados por meio de um grafo. Conclusão: A rede social mostrou-se uma fonte de dados poderosa para efeitos de farmacovigilância, pois o modelo de classificador apresentado neste artigo demonstra resultados satisfatórios para as técnicas utilizadas tornando-os promissores.
+        </p>               
+      </div> 
+      <br>
+
+      <!-- Imagem da ferramentas -->
+      <p>Clique na imagem para expandi-la</b></p>
+        <!-- Trigger the Modal -->
+        <img id="myImg" src="../static/images/Imagem-ferramentas.jpeg" alt="Snow" style="width:100%;max-width:300px">
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- The Close Button -->
+          <span class="close">&times;</span>
+
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" id="img01">
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+        </div>
+
     <!-- About Section -->
       <div class="w3-container w3-padding-32" id="about">
         <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>SOBRE NÓS</b></h4>
         
         <br> 
-        <a href="https://www.linkedin.com/in/katheleengregorato/" target="_blank">
-          <img id="integrante1" src="../static/images/integrante1.jpg" style="margin: 30px;">
-        </a>
-        <a href="https://www.linkedin.com/in/bpaixao/" target="_blank">
-          <img id="integrante2" src="../static/images/integrante2.jpg" style="margin: 30px;">
-        </a>
-        <a href="https://www.linkedin.com/in/fabioteixeira/"target="_blank">
-          <img id="integrante3" src="../static/images/integrante3.jpg" style="margin: 30px;">
-        </a>
-        <br>      
-                          
+        <div class="container">
+            <div class="w3-col l3 s4" style="margin: 10px;">
+              <a href="https://www.linkedin.com/in/katheleengregorato/" target="_blank">
+                <img id="integrante1" src="../static/images/integrante1.jpg" >
+                <p>Katheleen Gregorato<br><b>Estudante de ADS</b></p>
+              </a> 
+            </div>
+            <div class="w3-col l3 s4">
+              <a href="https://www.linkedin.com/in/bpaixao/" target="_blank">
+                <img id="integrante2" src="../static/images/integrante2.jpg" >
+                <p>Beatriz Paixão<br><b>Estudante de ADS</b></p>
+              </a>
+            </div>
+            <div class="w3-col l3 s4">
+              <a href="https://www.linkedin.com/in/fabioteixeira/" target="_blank">
+                <img id="integrante3" src="../static/images/integrante3.jpg" >
+                <p>Fabio Teixeira<br><b>Orientador</b></p>
+              </a>
+            </div>
+        </div>                     
       </div>
 
       <!-- Contact Section -->
