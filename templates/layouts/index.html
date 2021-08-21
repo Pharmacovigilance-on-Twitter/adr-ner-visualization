@@ -13,33 +13,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    <!--- Script para o Modal SOBRE-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
     <!--- Stylesheet para o Menu-->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  
 
     <title>TCC - Medicines</title>
 </head>
 
-
 <body>
-    <div class="w3-top">
-      <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-        <img id="logo" src="../static/images/logo.jpeg" alt="Logotipo do IFSP" />       
-         <!-- Float links to the right. Hide them on small screens -->
+   <!-- Navbar (sit on top) -->
+      <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card" >
+          <a href="#top" id="banner"><h5><b>Pharmacovigilance</b> on Twitter</a></h5>
+          <!-- Float links to the right. Hide them on small screens -->
           <div class="w3-right w3-hide-small">
             <a href="#projects" class="w3-bar-item w3-button">O Projeto</a>
             <a href="#about" class="w3-bar-item w3-button">Sobre nós</a>
             <a href="#contact" class="w3-bar-item w3-button">Contato</a>
             <br>
               <!-- Botão que inicia o grafo   -->
-              <div class="row text-right w3-right w3-hide-small" style="margin-top: 20px;">
-                <button class="btn btn-warning" id="sendButton" >Criar ou reiniciar grafo...</button>
-              </div>
+                <div class="row text-right w3-right w3-hide-small" style="margin-top: 20px;">
+                  <button class="btn btn-warning" id="sendButton" >Iniciar o grafo...</button>
+                </div>
           </div>
-      </div>  
-     </div>
+        </div>
+      </div>
         
 
     <!-- Elementos para hospedar a barra de progresso e o grafo   -->
@@ -56,67 +58,62 @@
     </div>
 
       <!-- Project Section -->
-      <div class="w3-container w3-padding-32" id="projects">
-        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"> O Projeto </h3>
-      </div>
-        <div class="title-main">
-          <h4><b>INTELIGÊNCIA ARTIFICIAL PARA A FARMACOVIGILÂNCIA EM POSTAGENS NO TWITTER RELACIONADAS A ANTIDEPRESSIVOS</b> </h4>
-          <h4><i>(Flask + vis.js + networkx + MongoDB)</i></h4>
+        <div class="w3-container w3-padding-32" id="projects">
+          <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="text-align: center; margin-top: 20px;"><b> O PROJETO</b></h3>
+        </div>
+          <div class="title-main" style="text-align: center;">
+            <h4><b>INTELIGÊNCIA ARTIFICIAL PARA A FARMACOVIGILÂNCIA EM POSTAGENS NO TWITTER RELACIONADAS A ANTIDEPRESSIVOS</b> </h4>
+            <h4><i>(Flask + vis.js + networkx + MongoDB)</i></h4>
           </div>
-      <div>
-       <p style="text-align: justify; margin: 20px;"><b>Resumo:</b>  O impacto psicológico da quarentena, causado pela crise sanitária atribuída à nova Sars-Cov-2, fez com que grande parte da população utilizasse medicamentos para tratamento de depressão. Outra consequência do isolamento social é a manifestação individual de opiniões ou julgamentos em redes sociais, tornando-as uma fonte de dados valiosos. <b>Objetivo:</b>  construção de uma solução computacional capaz de identificar automaticamente relatos de efeitos adversos de medicamentos antidepressivos postados na rede social Twitter. <b>Método:</b>  Criação de uma base de dados com aproximadamente 10.000 postagens coletadas da rede social Twitter. Foram utilizadas técnicas de aprendizado de máquina, reconhecimento de entidades nomeadas, processamento de linguagem natural e grafos para identificar medicamentos e seus respectivos efeitos adversos. <b>Resultados:</b>  o  reconhecimento de entidades nomeadas alcançou valores de f-score superiores a 0,56. Uma aplicação web foi construída para mostrar os resultados alcançados pela solução por meio de um grafo. <b>Conclusão:</b>  A rede social mostrou-se uma fonte de dados poderosa para efeitos de farmacovigilância, pois o modelo de classificador apresentado neste artigo demonstra resultados satisfatórios para as técnicas utilizadas tornando-os promissores.
-        </p>               
-      </div> 
+        
+          <div>
+          <p style="text-align: justify; margin: 75px; font-size: 12pt;"><b>Resumo:</b>  O impacto psicológico da quarentena, causado pela crise sanitária atribuída à nova Sars-Cov-2, fez com que grande parte da população utilizasse medicamentos para tratamento de depressão. Outra consequência do isolamento social é a manifestação individual de opiniões ou julgamentos em redes sociais, tornando-as uma fonte de dados valiosos. <b>Objetivo:</b>  construção de uma solução computacional capaz de identificar automaticamente relatos de efeitos adversos de medicamentos antidepressivos postados na rede social Twitter. <b>Método:</b>  Criação de uma base de dados com aproximadamente 10.000 postagens coletadas da rede social Twitter. Foram utilizadas técnicas de aprendizado de máquina, reconhecimento de entidades nomeadas, processamento de linguagem natural e grafos para identificar medicamentos e seus respectivos efeitos adversos. <b>Resultados:</b>  o  reconhecimento de entidades nomeadas alcançou valores de f-score superiores a 0,56. Uma aplicação web foi construída para mostrar os resultados alcançados pela solução por meio de um grafo. <b>Conclusão:</b>  A rede social mostrou-se uma fonte de dados poderosa para efeitos de farmacovigilância, pois o modelo de classificador apresentado neste artigo demonstra resultados satisfatórios para as técnicas utilizadas tornando-os promissores.
+            </p>               
+        </div> 
       <br>
 
-      <!-- Imagem da ferramentas -->
-      <p>Clique na imagem para expandi-la</b></p>
-        <!-- Trigger the Modal -->
-        <img id="myImg" src="../static/images/img-tools.jpg" alt="Snow" style="width:100%;max-width:300px">
-
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-
-          <!-- The Close Button -->
-          <span class="close">&times;</span>
-
-          <!-- Modal Content (The Image) -->
-          <img class="modal-content" id="img01">
-
-          <!-- Modal Caption (Image Text) -->
-          <div id="caption"></div>
-        </div>
-
     <!-- About Section -->
-      <div class="w3-container w3-padding-32" id="about">
-        <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>SOBRE NÓS</b></h4>
-        
-        <br> 
-        <div class="container">
-            <div class="w3-col l3 s4" style="margin: 10px;">
-              <a href="https://www.linkedin.com/in/katheleengregorato/" target="_blank">
-                <img id="integrante1" src="../static/images/integrante1.jpg" >
-                <p>Katheleen Gregorato<br><b>Estudante de ADS</b></p>
-              </a> 
+          <div class="w3-black" id="tour">
+            <div class="w3-container w3-content w3-padding-64" id="about" style="max-width:800px">
+              <h2 class="w3-wide w3-center">SOBRE NÓS</h2>
+              <p class="w3-opacity w3-center"><i>Conheça os participantes do projeto!</i></p><br>
+
+              <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+                <div class="w3-third w3-margin-bottom">               
+                  <img id="integrante1" src="../static/images/integrante1.jpg" alt="Katheleen Gregorato" style="width:100%" class="w3-hover-opacity">
+                  
+                  <div class="w3-container w3-white"><br>
+                    <p><b>Katheleen Gregorato</b></p>
+                    <p class="w3-opacity">IFSP</p>
+                    <p>Aluna de Análise e Desenvolvimento de Sistemas</p>
+                    <a href="www.linkedin.com/in/bpaixao"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+                <div class="w3-third w3-margin-bottom">
+                  <img id="integrante2" src="../static/images/integrante2.jpg" alt="Beatriz Paixão" style="width:100%" class="w3-hover-opacity">
+                  <div class="w3-container w3-white"><br>
+                    <p><b>Beatriz Paixão</b></p>
+                    <p class="w3-opacity">IFSP</p>
+                    <p>Aluna de Análise e Desenvolvimento de Sistemas</p>
+                    
+                  </div>
+                </div>
+                <div class="w3-third w3-margin-bottom">
+                  <img id="integrante3" src="../static/images/integrante3.jpg" alt="Fabio Teixeira" style="width:100%" class="w3-hover-opacity">                  
+                  <div class="w3-container w3-white"><br>
+                    <p><b>Fabio Teixeira</b></p>
+                    <p class="w3-opacity">IFSP</p>
+                    <p>Professor/Orientador do Trabalho de Conclusão de Curso</p>
+                   
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="w3-col l3 s4">
-              <a href="https://www.linkedin.com/in/bpaixao/" target="_blank">
-                <img id="integrante2" src="../static/images/integrante2.jpg" >
-                <p>Beatriz Paixão<br><b>Estudante de ADS</b></p>
-              </a>
-            </div>
-            <div class="w3-col l3 s4">
-              <a href="https://www.linkedin.com/in/fabioteixeira/" target="_blank">
-                <img id="integrante3" src="../static/images/integrante3.jpg" >
-                <p>Fabio Teixeira<br><b>Orientador</b></p>
-              </a>
-            </div>
-        </div>                     
-      </div>
+          </div>
 
       <!-- Contact Section -->
-      <div class="w3-container w3-padding-32" id="contact">
-        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contato</h3>
+      <div class="w3-container w3-padding-32" id="contact" style="text-align: center;">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>CONTATO</b></h3>
         <p>Lets get in touch and talk about your next project.</p> 
       </div>
 
@@ -126,7 +123,7 @@
 
 </body>
 <footer class="w3-center w3-black w3-padding-16">
-  <p><a href="#" title="Footer" class="w3-hover-text-green">Todos os direitos reservados &copy 2021</a></p>
+  <p>Todos os direitos reservados &copy 2021</p>
 </footer>
 
 </html>
