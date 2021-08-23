@@ -39,17 +39,17 @@ body {
 img#integrante1 {
     width: 190px;
     height: 240px;
-    border-radius: 10%;   
+    border-radius: 50%;   
 }
 img#integrante2 {
     width: 190px;
     height: 240px;  
-    border-radius: 10%;   
+    border-radius: 50%;   
 }
 img#integrante3{
     width: 190px;
     height: 240px;  
-    border-radius: 10%;  
+    border-radius: 50%;  
 }
 
 #mynetwork {
