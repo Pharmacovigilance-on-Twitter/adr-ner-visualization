@@ -24,7 +24,7 @@ https://devcenter.heroku.com/articles/getting-started-with-python
 
 
 ### Home page
-#### Site demonstração: https://tcc-named-entity-recognition.herokuapp.com/
+#### Site demonstração: https://adr-ner-vizualization.herokuapp.com/#
 <image width='500px' src='./home.jpg'>
 
 
