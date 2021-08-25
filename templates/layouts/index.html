@@ -13,71 +13,76 @@
     <link href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    
+
     <!--- Stylesheet para o Menu-->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
- 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>TCC - Medicines</title>
 </head>
 
 <body>
-   <!-- Navbar (sit on top) -->
-      <div class="w3-top">
-        <div class="w3-bar w3-light-grey w3-wide w3-padding w3-card" >
-        <!---a href="#top" id="banner"><h5><b>Pharmacovigilance</b> on Twitter</a></h5> --->
-        <br>
-          <!-- Float links to the right. Hide them on small screens -->
-          <div class="w3-right w3-hide-small" style="margin-top: -30px;">
-            <a href="#projects" class="w3-bar-item w3-button" style="text-decoration: none;">O Projeto</a>
-            <a href="#about" class="w3-bar-item w3-button" style="text-decoration: none;">Sobre nós</a>
-            <a href="#contact" class="w3-bar-item w3-button" style="text-decoration: none;">Contato</a>
-            <br><br><br>
-              <!-- Botão que inicia o grafo   -->
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-light-grey w3-wide w3-padding w3-card">
+            <!---a href="#top" id="banner"><h5><b>Pharmacovigilance</b> on Twitter</a></h5> --->
+            <br>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small" style="margin-top: -30px;">
+                <a href="#projects" class="w3-bar-item w3-button" style="text-decoration: none;">O Projeto</a>
+                <a href="#about" class="w3-bar-item w3-button" style="text-decoration: none;">Sobre nós</a>
+                <a href="#contact" class="w3-bar-item w3-button" style="text-decoration: none;">Contato</a>
+                <br><br><br>
+                <!-- Botão que inicia o grafo   -->
                 <div class="row text-right w3-right w3-hide-small" style="margin-top: 20px;"><br>
-                  <button class="btn btn-info" id="sendButton" >Iniciar/Reiniciar o Grafo ...</button>
+                    <button class="btn btn-info" id="sendButton">Iniciar/Reiniciar o Grafo ...</button>
                 </div>
-          </div>
-        </div>
-      </div>
-
-     <!-- Project Section -->
-     <div class="w3-black" id="">
-        <div class="w3-container w3-padding-32 w3-black" id="projects">
-          <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="text-align: center; margin-top: 20px;">O PROJETO</h4>
-        </div>
-          <div class="title-main" style="text-align: center; margin: 0px 100px 10px 100px">
-            <h4><b>Inteligência Artificial para a Farmacovigilância em Postagens no Twitter relacionadas a Antidepressivos</b> </h4>
-          </div>
-
-            <div class="row">
-              <div class="col-sm-6">
-                <p style="text-align: justify; margin: 30px 10px 25px 100px; font-size: 12pt;">
-                <b>Resumo:</b> O impacto psicológico da quarentena, causado pela crise sanitária atribuída à nova Sars-Cov-2, fez com que grande parte da população utilizasse medicamentos para tratamento de depressão. Outra consequência do isolamento social é a manifestação individual de opiniões ou julgamentos em redes sociais, tornando-as uma fonte de dados valiosos. <br><b>Objetivo:</b> construção de uma solução computacional capaz de identificar automaticamente relatos de efeitos adversos de medicamentos antidepressivos postados na rede social Twitter. <br><b>Método:</b> Criação de uma base de dados com aproximadamente 10 mil postagens coletadas da rede social Twitter. Foram utilizadas técnicas de aprendizado de máquina, reconhecimento de entidades nomeadas, processamento de linguagem natural e grafos para identificar medicamentos e seus respectivos efeitos adversos. </p>
-              </div>
-              <div class="col-sm-6">
-                <p style="text-align: justify; margin: 30px 100px 25px 10px; font-size: 12pt;">
-                <b>Ferramentas:</b> Classificação de entidades nomeadas (Medicamento e Efeito Adverso) no Doccano, treinamento do algoritmo CRF e utilização de bibliotecas para vizualização (Flask + vis.js + networkx). Armazenados em banco de dados NoSQL (MongoDB).
-                <br><b>Resultados:</b> o  reconhecimento de entidades nomeadas alcançou valores de f-score superiores a 0,58. Uma aplicação web foi construída para mostrar os resultados alcançados pela solução por meio de um grafo. <br><b>Conclusão:</b> A rede social mostrou-se uma fonte de dados poderosa para efeitos de farmacovigilância, pois o modelo de classificador apresentado neste artigo demonstra resultados satisfatórios para as técnicas utilizadas tornando-os promissores. </p>
-              </div>
             </div>
-        <div>
-          <p style="text-align: justify; margin: 20px 100px 25px 100px; font-size: 12pt;">
-           <br><i><b> * Abaixo o resultados final do projeto, inicie e/ou reinicie o grafo e clique 2x sobre os nós para navegar </i></b>
-            </p> <br>              
-        </div> 
+        </div>
     </div>
 
-    <!-- Elementos para hospedar a barra de progresso e o grafo   --> 
+    <!-- Project Section -->
+    <div class="w3-black" id="">
+        <div class="w3-container w3-padding-32 w3-black" id="projects">
+            <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="text-align: center; margin-top: 20px;">O PROJETO</h4>
+        </div>
+        <div class="title-main" style="text-align: center; margin: 0px 100px 10px 100px">
+            <h4><b>Inteligência Artificial para a Farmacovigilância em Postagens no Twitter relacionadas a Antidepressivos</b> </h4>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <p style="text-align: justify; margin: 30px 10px 25px 100px; font-size: 12pt;">
+                    <b>Resumo:</b> O impacto psicológico da quarentena, causado pela crise sanitária atribuída à nova Sars-Cov-2, fez com que grande parte da população utilizasse medicamentos para tratamento de depressão. Outra consequência do isolamento
+                    social é a manifestação individual de opiniões ou julgamentos em redes sociais, tornando-as uma fonte de dados valiosos. <br><b>Objetivo:</b> construção de uma solução computacional capaz de identificar automaticamente relatos de efeitos
+                    adversos de medicamentos antidepressivos postados na rede social Twitter. <br><b>Método:</b> Criação de uma base de dados com aproximadamente 10 mil postagens coletadas da rede social Twitter. Foram utilizadas técnicas de aprendizado
+                    de máquina, reconhecimento de entidades nomeadas, processamento de linguagem natural e grafos para identificar medicamentos e seus respectivos efeitos adversos. </p>
+            </div>
+            <div class="col-sm-6">
+                <p style="text-align: justify; margin: 30px 100px 25px 10px; font-size: 12pt;">
+                    <b>Ferramentas:</b> Classificação de entidades nomeadas (Medicamento e Efeito Adverso) no Doccano, treinamento do algoritmo CRF e utilização de bibliotecas para vizualização (Flask + vis.js + networkx). Armazenados em banco de dados
+                    NoSQL (MongoDB).
+                    <br><b>Resultados:</b> o reconhecimento de entidades nomeadas alcançou valores de f-score superiores a 0,58. Uma aplicação web foi construída para mostrar os resultados alcançados pela solução por meio de um grafo. <br><b>Conclusão:</b>                    A rede social mostrou-se uma fonte de dados poderosa para efeitos de farmacovigilância, pois o modelo de classificador apresentado neste artigo demonstra resultados satisfatórios para as técnicas utilizadas tornando-os promissores.
+                </p>
+            </div>
+        </div>
+        <div>
+            <p style="text-align: justify; margin: 20px 100px 25px 100px; font-size: 12pt;">
+                <br><i><b> * Abaixo o resultados final do projeto, inicie e/ou reinicie o grafo e clique 2x sobre os nós para navegar </i></b>
+            </p> <br>
+        </div>
+    </div>
+
+    <!-- Elementos para hospedar a barra de progresso e o grafo   -->
     <div id="wrapper">
         <div id="mynetwork"></div>
         <div id="loadingBar">
-            <div class="outerBorder" >
+            <div class="outerBorder">
                 <div id="text">0%</div>
                 <div id="border">
                     <div id="bar"></div>
@@ -87,64 +92,65 @@
     </div>
 
     <!-- About Section -->
-          <div class="w3-black" id="tour">
-            <div class="w3-container w3-content w3-padding-64" id="about" style="max-width:800px">
-              <h3 class="w3-wide w3-center">SOBRE NÓS</h3>
-              <p class="w3-opacity w3-center"><i>Conheça os participantes do projeto!</i></p><br>
+    <div class="w3-black" id="tour">
+        <div class="w3-container w3-content w3-padding-64" id="about" style="max-width:800px">
+            <h3 class="w3-wide w3-center">SOBRE NÓS</h3>
+            <p class="w3-opacity w3-center"><i>Conheça os participantes do projeto!</i></p><br>
 
-              <div class="w3-row-padding w3-padding-16" style="margin:0 -16px">
+            <div class="w3-row-padding w3-padding-16" style="margin:0 -16px">
                 <div class="w3-third w3-margin-bottom">
-                  <a href="https://www.linkedin.com/in/katheleengregorato" target="_blank" data-toggle="tooltip" data-html="true" title="Clique para acessar meu LinkedIn">            
-                  <img id="integrante1" src="/static/images/integrante3.jpg" alt="Katheleen Gregorato" style="width:100%" class="w3-hover-opacity"></a><br>
-                  <div style="margin: 10px 35px 20px 35px;">
-                    <p><b>Katheleen Gregorato</b></p>                    
-                    <p>Aluna de Análise e Desenvolvimento de Sistemas no IFSP</p>
-                  </div>
+                    <a href="https://www.linkedin.com/in/katheleengregorato" target="_blank" data-toggle="tooltip" data-html="true" title="Clique para acessar meu LinkedIn">
+                        <img id="integrante1" src="/static/images/integrante1.jpg" alt="Katheleen Gregorato" style="width:100%" class="w3-hover-opacity"></a><br>
+                    <div style="margin: 10px 35px 20px 35px;">
+                        <p><b>Katheleen Gregorato</b></p>
+                        <p>Aluna de Análise e Desenvolvimento de Sistemas no IFSP</p>
+                    </div>
                 </div>
                 <div class="w3-third w3-margin-bottom">
-                  <a href="https://www.linkedin.com/in/bpaixao" target="_blank" data-toggle="tooltip" data-html="true" title="Clique para acessar meu LinkedIn"> 
-                  <img id="integrante2" src="/static/images/integrante2.jpg" alt="Beatriz Paixão" style="width: 100%;" class="w3-hover-opacity"><a><br>
-                  <div style="margin: 10px 30px 20px 35px;"> 
-                    <p><b>Beatriz Paixão</b><br>             
-                    <p>Aluna de Análise e Desenvolvimento de Sistemas no IFSP</p>         
-                  </div>
+                    <a href="https://www.linkedin.com/in/bpaixao" target="_blank" data-toggle="tooltip" data-html="true" title="Clique para acessar meu LinkedIn">
+                        <img id="integrante2" src="/static/images/integrante2.jpg" alt="Beatriz Paixão" style="width: 100%;" class="w3-hover-opacity">
+                        <a><br>
+                            <div style="margin: 10px 30px 20px 35px;">
+                                <p><b>Beatriz Paixão</b><br>
+                                    <p>Aluna de Análise e Desenvolvimento de Sistemas no IFSP</p>
+                            </div>
                 </div>
-                
+
                 <div class="w3-third w3-margin-bottom">
-                  <a href="https://www.linkedin.com/in/fabioteixeira" target="_blank" data-toggle="tooltip" data-html="true" title="Clique para acessar meu LinkedIn"> 
-                  <img id="integrante3" src="/static/images/integrante4.jpg" alt="Fabio Teixeira" style="width: 100%;" class="w3-hover-opacity"></a><br>
-                  <div style="margin: 10px 30px 20px 35px;">
-                    <p><b>Fabio Teixeira</b></p>                    
-                    <p>Professor/Orientador do Trabalho de Conclusão de Curso no IFSP</p>               
-                  </div>
+                    <a href="https://www.linkedin.com/in/fabioteixeira" target="_blank" data-toggle="tooltip" data-html="true" title="Clique para acessar meu LinkedIn">
+                        <img id="integrante3" src="/static/images/integrante3.jpg" alt="Fabio Teixeira" style="width: 100%;" class="w3-hover-opacity"></a><br>
+                    <div style="margin: 10px 30px 20px 35px;">
+                        <p><b>Fabio Teixeira</b></p>
+                        <p>Professor/Orientador do Trabalho de Conclusão de Curso no IFSP</p>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-
-      <!-- Contact Section -->
-      <div class="w3-container w3-padding-32" id="contact" style="text-align: center;">
-        <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16"> REDES SOCIAIS</h4>
-        
-        <div class="w3-centered w3-white w3-hide-small">
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
-          <a href="https://github.com/Pharmacovigilance-on-Twitter" class="w3-bar-item w3-button"><i class="fa fa-github"></i></a>
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
-          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
-          <a href="mailto:farmacovigilancia.twitter@gmail.com" class="w3-bar-item w3-button"><i class="fa fa-google"></i></a>
-          <br><br>
         </div>
-        
-      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="w3-container w3-padding-32" id="contact" style="text-align: center;">
+        <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16"> REDES SOCIAIS</h4>
+
+        <div class="w3-centered w3-white w3-hide-small">
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+            <a href="https://github.com/Pharmacovigilance-on-Twitter" class="w3-bar-item w3-button"><i class="fa fa-github"></i></a>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+            <a href="mailto:farmacovigilancia.twitter@gmail.com" class="w3-bar-item w3-button"><i class="fa fa-google"></i></a>
+            <br><br>
+        </div>
+
+    </div>
 
 
 
-  <a href="#" style="position:static; margin-left: 90%;" class="w3-button w3-black w3-padding-large w3-margin-bottom">Topo</a>
+    <a href="#" style="position:static; margin-left: 90%;" class="w3-button w3-black w3-padding-large w3-margin-bottom">Topo</a>
 
 </body>
 <footer class="w3-center w3-black w3-padding-16">
-  <p> Copyright &copy; <a href="https://ptb.ifsp.edu.br/" target="_blank"> IFSP</a> - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (11) 2504-0100  <br/> 
+    <p> Copyright &copy; <a href="https://ptb.ifsp.edu.br/" target="_blank"> IFSP</a> - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (11) 2504-0100 <br/>
 </footer>
 
 </html>
