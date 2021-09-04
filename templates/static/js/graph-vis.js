@@ -22,15 +22,15 @@
       var values_vis = values.map(e => ({ values: e }));
       var nodes_vis = keys_vis.map((o, i) => ({ id: o.id, label: values_vis[i].values.label, group: values_vis[i].values.group }));
 
-      /*
-      Criará uma estrutura de dados para as arestas similar a:
+      
+     /*Criará uma estrutura de dados para as arestas similar a:
       var edges = new vis.DataSet([
         {from: 1, to: 3},
         {from: 1, to: 2},
         {from: 2, to: 4},
         {from: 2, to: 5}
-      ]);
-      */
+      ]);*/
+      
       var from_vis = from.map(e => ({ from: e }));
       var to_vis = to.map(e => ({ to: e }));
       var edge_vis = from_vis.map((o, i) => ({ from: o.from, to: to_vis[i].to }));
@@ -55,8 +55,8 @@
       var options = {
           groups: {
               1: { color: { background: 'red' }, borderWidth: 3 },
-              2: { color: { background: 'yellow' }, borderWidth: 3 },
-              3: { color: { background: 'blue' }, borderWidth: 3 },
+              2: { color: { background: 'orange' }, borderWidth: 3 },
+              3: { color: { background: 'green' }, borderWidth: 3 },
           },
           nodes: {
               shape: "dot",
