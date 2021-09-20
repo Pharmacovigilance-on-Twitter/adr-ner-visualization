@@ -19,10 +19,6 @@
 ### Iniciar a aplicação localmente: 
 `python3 app.py`
 
-### Instruções para publicar na plataforma Heroku
-https://devcenter.heroku.com/articles/getting-started-with-python
-
-
 ### Home page
 #### Site demonstração: https://adr-ner-vizualization.herokuapp.com/#
 <image width='500px' src='./home.jpg'>
