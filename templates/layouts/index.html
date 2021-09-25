@@ -39,8 +39,8 @@
                 <a href="#contact" class="w3-bar-item w3-button" style="text-decoration: none;">Contato</a>
                 <br><br><br>
                 <!-- Botão que inicia o grafo   -->
-                <div class="row text-right w3-right w3-hide-small" style="margin-top: 20px;"><br>
-                    <button class="btn btn-info" id="sendButton">Iniciar/Reiniciar o Grafo ...</button>
+                <div class="row text-right w3-right w5-hide-small" style="margin-top: 15px;"><br>
+                    <button class="btn btn-info" id="sendButton" style="font-size: 14pt;">Iniciar/Reiniciar o Grafo ...</button>
                 </div>
             </div>
         </div>
@@ -58,22 +58,17 @@
         <div class="row">
             <div class="col-sm-6">
                 <p style="text-align: justify; margin: 30px 10px 25px 100px; font-size: 12pt;">
-                    <b>Resumo:</b> O impacto psicológico da quarentena, causado pela crise sanitária atribuída à nova Sars-Cov-2, fez com que grande parte da população utilizasse medicamentos para tratamento de depressão. Outra consequência do isolamento
-                    social é a manifestação individual de opiniões ou julgamentos em redes sociais, tornando-as uma fonte de dados valiosos. <br><b>Objetivo:</b> construção de uma solução computacional capaz de identificar automaticamente relatos de efeitos
-                    adversos de medicamentos antidepressivos postados na rede social Twitter. <br><b>Método:</b> Criação de uma base de dados com aproximadamente 10 mil postagens coletadas da rede social Twitter. Foram utilizadas técnicas de aprendizado
-                    de máquina, reconhecimento de entidades nomeadas, processamento de linguagem natural e grafos para identificar medicamentos e seus respectivos efeitos adversos. </p>
+                    <b>Resumo:</b> O impacto psicológico do isolamento social fez com que grande parte da população utilizasse medicamentos para tratamento de depressão. Outra consequência é a utilização excessiva das redes sociais, tornando-as uma fonte de dados valiosos. <b>Objetivo:</b> construção de uma solução computacional que identifique automaticamente relatos de efeitos adversos relacionados a antidepressivos postados na rede social Twitter.  <b>Método:</b> Criação de uma base de dados com 9.571 mil postagens coletadas da rede social. Utilização de técnicas de aprendizado de máquina, processamento de linguagem natural,  reconhecimento de entidades nomeadas e grafos para demonstração dos resultados.</p>
             </div>
             <div class="col-sm-6">
                 <p style="text-align: justify; margin: 30px 100px 25px 10px; font-size: 12pt;">
-                    <b>Ferramentas:</b> Classificação de entidades nomeadas (Medicamento e Efeito Adverso) no Doccano, treinamento do algoritmo CRF e utilização de bibliotecas para vizualização (Flask + vis.js + networkx). Armazenados em banco de dados
-                    NoSQL (MongoDB).
-                    <br><b>Resultados:</b> o reconhecimento de entidades nomeadas alcançou valores de f-score superiores a 0,58. Uma aplicação web foi construída para mostrar os resultados alcançados pela solução por meio de um grafo. <br><b>Conclusão:</b>                    A rede social mostrou-se uma fonte de dados poderosa para efeitos de farmacovigilância, pois o modelo de classificador apresentado neste artigo demonstra resultados satisfatórios para as técnicas utilizadas tornando-os promissores.
+                    <b>Ferramentas:</b> Classificação de entidades nomeadas (Medicamento e Efeito Adverso) com o Doccano, treinamento do algoritmo CRF e utilização de bibliotecas para vizualização (Flask + vis.js + networkx). Armazenados em banco de dados NoSQL (MongoDB). <b>Resultados:</b> o  reconhecimento de entidades nomeadas alcançou valores de f-score superiores a 0,58. Uma aplicação web foi construída para mostrar as conexões entre usuários e relatos de efeitos adversos. <b>Conclusão:</b>  A rede social mostrou-se uma fonte de dados poderosa para efeitos de farmacovigilância, pois o modelo de classificador demonstra resultados satisfatórios para as técnicas utilizadas tornando-os promissores
                 </p>
             </div>
         </div>
         <div>
             <p style="text-align: justify; margin: 20px 100px 25px 100px; font-size: 12pt;">
-                <br><i><b> * Abaixo o resultado final do projeto, inicie e/ou reinicie o grafo e clique 2x sobre os nós para navegar </i></b>
+                <i><b> * Abaixo o resultado final do projeto, inicie e/ou reinicie o grafo e clique 2x sobre os nós para navegar </i></b>
             </p> <br>
         </div>
     </div>
@@ -103,7 +98,7 @@
                         <img id="integrante2" src="/static/images/person1.jpg" alt="Katheleen Gregorato" style="width: 100%;" class="w3-hover-opacity">
                         <a><br>
                             <div style="margin: 10px 30px 20px 35px;">
-                                <p><b>katheleen Gregorato</b><br>
+                                <p><b>Katheleen Gregorato</b><br>
                                     <p>Aluna de Análise e Desenvolvimento de Sistemas no IFSP</p>
                             </div>
                 </div>
@@ -134,9 +129,8 @@
         <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16"> REDES SOCIAIS</h4>
 
         <div class="w3-centered w3-white w3-hide-small">
-            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
-            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
             <a href="https://github.com/Pharmacovigilance-on-Twitter" class="w3-bar-item w3-button" target="_blank" ><i class="fa fa-github"></i></a>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
             <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
             <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
             <a href="mailto:farmacovigilancia.twitter@gmail.com" class="w3-bar-item w3-button" target="_blank" ><i class="fa fa-google"></i></a>
@@ -151,7 +145,7 @@
 
 </body>
 <footer class="w3-center w3-black w3-padding-16">
-    <p> Copyright &copy; <a href="https://ptb.ifsp.edu.br/" target="_blank"> IFSP</a> - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (11) 2504-0100 <br/>
+    <p> Copyright &copy; <a href="https://ptb.ifsp.edu.br/" target="_blank" id="banner2"> IFSP</a> - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (11) 2504-0100 <br/>
 </footer>
 
 </html>
