@@ -197,3 +197,20 @@ div.outerBorder {
     height: 300px;
     background: #fff;
 }
+
+span#drug {
+    content: "\2022";
+    font-size: 20pt;
+    color: red;
+  }
+
+span#adr {
+    content: "\2022";
+    font-size: 20pt;
+    color: yellow;
+  }
+span#user {
+    content: "\2022";
+    font-size: 20pt;
+    color: blue;
+  }
