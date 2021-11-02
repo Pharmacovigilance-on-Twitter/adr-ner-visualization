@@ -130,6 +130,7 @@ def post_javascript_data():
         return { 'nodes' : list(G.nodes.data()), 'edges' : list(G.edges())}
         
     uri = "mongodb+srv://db_userTwitter:1QFuElt3ASr5r7Dh@twitter.vw2tu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    
     db = returnDatabase(uri = uri, database = 'Twitter' )
     collection = returnCollection(db, collection = 'CRF')
 
