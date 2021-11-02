@@ -17,11 +17,11 @@ app._static_folder = os.path.abspath("templates/static")
 G = nx.DiGraph()
 
 #Conectar ao MongoDB
-def returnDatabase(uri = 'mongodb+srv://db_userTwitter:1QFuElt3ASr5r7Dh@twitter.vw2tu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-                   database = 'Twitter'):
+def returnDatabase(uri = '[your-url-database]',
+                   database = '[your-database]'):
     return MongoClient(uri, connectTimeoutMS=300000).get_database(database)
 
-def returnCollection(db, collection = 'CRF'):
+def returnCollection(db, collection = '[your-collection]'):
     return db.get_collection(collection)
 
 #Criar os nós do grafo
@@ -129,10 +129,10 @@ def post_javascript_data():
     if(G.number_of_nodes() > 0):
         return { 'nodes' : list(G.nodes.data()), 'edges' : list(G.edges())}
         
-    uri = "mongodb+srv://db_userTwitter:1QFuElt3ASr5r7Dh@twitter.vw2tu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    uri = "[your-url-database]"
     
-    db = returnDatabase(uri = uri, database = 'Twitter' )
-    collection = returnCollection(db, collection = 'CRF')
+    db = returnDatabase(uri = uri, database = '[your-database-with-tweets]' )
+    collection = returnCollection(db, collection = '[your-new-database]')
 
     #Criar os nós do grafo    
     users = returnUsers(collection)
