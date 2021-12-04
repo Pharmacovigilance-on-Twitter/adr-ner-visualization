@@ -31,7 +31,7 @@ A Marcação das postagens foi realizada utilizando o reconhecimento de entidade
 `python3 app.py`
 
 ### Home page
-#### Site demonstração: https://adr-ner-vizualization.herokuapp.com/#
+#### Site demonstração: https://ner-visualization-adr.herokuapp.com/
 <image width='500px' src='./home.jpg'>
 
 
