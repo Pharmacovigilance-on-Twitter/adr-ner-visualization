@@ -17,7 +17,7 @@ A Marcação das postagens foi realizada utilizando o reconhecimento de entidade
     <img align="center" alt="Heroku" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/heroku/heroku-original-wordmark.svg">
   </a>
   <a href="https://networkx.org/">
-    <img align="center" alt="NetwokX" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original">
+    <img align="center" alt="NetwokX" height="60" width="80" src="https://user-images.githubusercontent.com/54141068/142236499-3c741ae9-a30a-42e9-afde-ef7a95d26de3.png">
   </a>
 </div>
 
